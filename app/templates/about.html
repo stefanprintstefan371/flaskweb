@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>O mne</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
+  <link rel='icon' href='/static/favicon.ico' type='image/x-icon'/>
+  <link rel='shortcut icon' type='image/x-icon' href='/static/favicon.ico'/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/static/assets/css/main.css" />
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #20B2AA;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+    background: url(../images/"bg.jpg"); 
+    color: #ffffff;
+  }
+  .bg-2 { 
+    background-color: #20B2AA; /* Mint Blue */
+    color: #ffffff;
+  }
+  .bg-3 { 
+    background-color: #ffffff; /* White */
+    color: #555555;
+  }
+  .bg-4 { 
+    background-color: #20B2AA; 
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+    color: #1abc9c !important;
+  }
+  </style>
+</head>
+<body>
+  {% extends "base.html" %}
+  {% block app_content %}
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="{{ url_for('main.about') }}">Ja</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://pythonise.com/">Uč sa</a></li>
+        <li><a href="https://www.tutorialspoint.com/index.htm">Tutorial</a></li>
+        <li><a href="https://blog.ruanbekker.com/blog/2018/05/27/web-forms-with-python-flask-and-the-wtforms-module-with-bootstrap/">Flask</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center">
+  <strong><h3 class="margin">Kto som?</h3></strong>
+  <img src="static/images/about4.jpg" class="img-responsive img" style="display:inline" alt="Bird" width="1080" height="720"/>
+  <strong><h3><b>Som programátor web aplikácií a nadšenec Pythonu</b></h3></strong>
+</div>
+
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h3 class="margin">Čomu sa venujem?</h3>
+  <p>Venujem sa tvorbe weboých stránok a aplikácií. Programovaniu sa venujem dva roky, investoval som do kurzov, ale prevažnú väčšinu som sa vzdelával sám ako samouk chytilo ma to a v blízkej budúcnosti by som sa chcel aj živiť programovaním. </p>
+  <a href="https://www.google.com/?hl=cs" class="btn btn-default btn-lg">
+    <span class="glyphicon glyphicon-search"></span> Vyhľadávanie
+  </a>
+</div>
+
+<!-- Third Container (Grid) -->
+<div class="container-fluid bg-3 text-center">    
+  <h3 class="margin">Kde ma nájdete?</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Certifikát Flask.</p>
+      <a href="static/images/birds1.jpg">
+      <img src="static/images/birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image"/>
+      </a>
+    </div>
+    <div class="col-sm-4"> 
+      <p>Certifikát Python.</p>
+      <a href="static/images/birds2.jpg">
+      <img src="static/images/birds2.jpg" class="img-responsive margin" style="width:100%" alt="Image"/>
+      </a>
+    </div>
+    <div class="col-sm-4"> 
+      <p>Certifikát Google.</p>
+      <a href="static/images/birds3.jpg">
+      <img src="static/images/birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image"/>
+      </a>
+    </div>
+  </div>
+</div>
+
+<form><a href='mailto:stefanjancar1@gmail.com'> Pošlite mi e-mail! </a></form> 
+
+<!-- Scripts -->
+      <script src="/static/assets/js/jquery.min.js"></script>
+      <script src="/static/assets/js/jquery.poptrox.min.js"></script>
+      <script src="/static/assets/js/skel.min.js"></script>
+      <script src="/static/assets/js/main.js"></script>
+      <script src="/static/js/vue.js"></script>
+      <script src="/static/assets/js/moment.js"></script>
+      <script src="/static/myform/form.js"></script>
+
+
+{% endblock %}
+</body>
+</html>
